@@ -5,14 +5,27 @@
  */
 
 /* You can override the default Infima variables here. */
+/* Light mode gradient background */
 :root {
-  --ifm-color-primary: #635b25;
-  --ifm-color-primary-dark: #595221;
-  --ifm-color-primary-darker: #544d1f;
-  --ifm-color-primary-darkest: #45401a;
-  --ifm-color-primary-light: #6d6429;
-  --ifm-color-primary-lighter: #72692b;
-  --ifm-color-primary-lightest: #817630;
+  background: linear-gradient(135deg, #f0f8ff, #e6f0ff, #ffffff);
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* Ensure text is readable in light mode */
+:root {
+  --ifm-color-primary: #1a73e8; /* Blue for primary color */
+  --ifm-color-primary-dark: #1557b7;
+  --ifm-color-primary-darker: #104499;
+  --ifm-color-primary-darkest: #0c3377;
+  --ifm-color-primary-light: #4d8feb;
+  --ifm-color-primary-lighter: #6fa3ee;
+  --ifm-color-primary-lightest: #91b7f1;
+  --ifm-font-color-base: #333333; /* Dark gray for text */
+  --ifm-heading-color: #222222; /* Slightly darker for headings */
+  --ifm-link-color: #1a73e8; /* Blue for links */
+  --ifm-link-hover-color: #1557b7; /* Darker blue for hover */
   --ifm-global-radius: 12px;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --button-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -20,19 +33,169 @@
   --button-active-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Navbar in light mode */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Footer in light mode */
+.footer {
+  background-color: rgba(255, 255, 255, 0.95); /* Less transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: #333333; /* Dark gray text for better contrast */
+}
+
+.footer a {
+  color: #1a73e8; /* Blue for links */
+}
+
+.footer a:hover {
+  color: #1557b7; /* Darker blue for hover */
+}
+
+[data-theme=light] .footer__title {
+  color: #333333; /* Dark gray text for better contrast */
+}
+
+/* Buttons in light mode */
+.button {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--ifm-color-primary-light);
+}
+
+/* Cards in light mode */
+.card {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero section in light mode */
+.hero {
+  background: linear-gradient(135deg, #f0f8ff, #e6f0ff, #ffffff);
+  color: var(--ifm-font-color-base);
+}
+
+.hero .button {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+.hero .button:hover {
+  background-color: var(--ifm-color-primary-light);
+}
+
+/* Code blocks in light mode */
+pre {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode gradient background */
 [data-theme='dark'] {
-  --ifm-color-primary: #ccc178;
-  --ifm-color-primary-dark: #c3b660;
-  --ifm-color-primary-darker: #bfb155;
-  --ifm-color-primary-darkest: #a5973e;
-  --ifm-color-primary-light: #d5cc90;
-  --ifm-color-primary-lighter: #d9d19b;
-  --ifm-color-primary-lightest: #e7e1bf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --button-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-  --button-hover-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-  --button-active-box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40, #3a3a5a);
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* Ensure text is readable in dark mode */
+[data-theme='dark'] {
+  --ifm-color-primary: #bb86fc; /* Light purple for primary color */
+  --ifm-color-primary-dark: #a56afc;
+  --ifm-color-primary-darker: #8f4efc;
+  --ifm-color-primary-darkest: #7932fc;
+  --ifm-color-primary-light: #d1a4ff;
+  --ifm-color-primary-lighter: #e7c2ff;
+  --ifm-color-primary-lightest: #fde0ff;
+  --ifm-font-color-base: #ffffff; /* White text for better contrast */
+  --ifm-heading-color: #ffffff; /* White for headings */
+  --ifm-link-color: #bb86fc; /* Light purple for links */
+  --ifm-link-hover-color: #d1a4ff; /* Lighter purple for hover */
+}
+
+/* Navbar in dark mode */
+[data-theme='dark'] .navbar {
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent black */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer in dark mode */
+[data-theme='dark'] .footer {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff; /* White text for better contrast */
+}
+
+[data-theme='dark'] .footer a {
+  color: #bb86fc; /* Light purple for links */
+}
+
+[data-theme='dark'] .footer a:hover {
+  color: #d1a4ff; /* Lighter purple for hover */
+}
+
+/* Buttons in dark mode */
+[data-theme='dark'] .button {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme='dark'] .button:hover {
+  background-color: var(--ifm-color-primary-light);
+}
+
+/* Cards in dark mode */
+[data-theme='dark'] .card {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero section in dark mode */
+[data-theme='dark'] .hero {
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40, #3a3a5a);
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .hero .button {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+[data-theme='dark'] .hero .button:hover {
+  background-color: var(--ifm-color-primary-light);
+}
+
+/* Code blocks in dark mode */
+[data-theme='dark'] pre {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @keyframes subtleRotate {
@@ -96,7 +259,6 @@
   display: none;
 }
 
-
 .default-themed-button {
   background: var(--ifm-color-primary);
   color: white;
@@ -124,6 +286,145 @@
   transform: scale(1.05);
   box-shadow: var(--button-hover-box-shadow);
   color: white;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+[data-theme='dark'] .navbar {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+[data-theme='dark'] .footer {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Fallback for older browsers */
+@supports not (backdrop-filter: blur(10px)) {
+  .navbar, .footer {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  [data-theme='dark'] .navbar, [data-theme='dark'] .footer {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+/* Buttons */
+.button {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .button {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme='dark'] .button:hover {
+  background-color: var(--ifm-color-primary-light);
+}
+
+/* Cards */
+.card {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .card {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(135deg, #f0f8ff, #e6f0ff, #ffffff);
+  color: var(--ifm-font-color-base);
+}
+
+.hero .button {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+.hero .button:hover {
+  background-color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .hero {
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40, #3a3a5a);
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .hero .button {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+[data-theme='dark'] .hero .button:hover {
+  background-color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .hero__title,
+[data-theme='dark'] .hero__subtitle,
+[data-theme='dark'] .card h2,
+[data-theme='dark'] .card p {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px 16px;
+  border-radius: var(--ifm-global-radius);
+  display: inline-block;
+}
+
+/* Code blocks */
+pre {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] pre {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 

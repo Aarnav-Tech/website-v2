@@ -21,10 +21,6 @@ const config: Config = {
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en-GB',
-    locales: ['en-GB'],
-  },
   scripts: [
     {src: 'https://plausible.viren070.me/js/script.js', defer: true, 'data-domain': 'aarnav.rf.gd'}
   ],
@@ -70,7 +66,8 @@ const config: Config = {
       title: 'Aarnav\'s Site',
       logo: {
         alt: 'Guides Logo',
-        src: 'img/pfp.svg',
+        src: 'img/logo-light.png',
+        srcDark: 'img/logo-dark.png',
       },
       items: [
         // add widget here as navbar is always loaded regardless of page
