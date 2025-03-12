@@ -79,10 +79,6 @@ const config: Config = {
           'aria-label': 'GitHub Account',
         },
         // Add the custom theme switcher
-        {
-          type: 'custom-themeSwitcher',
-          position: 'right',
-        },
       ],
     },
     footer: {
