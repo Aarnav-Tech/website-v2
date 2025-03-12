@@ -1,9 +1,12 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import { NavbarItem } from '@docusaurus/theme-common';
+
 
 const config: Config = {
-  title: 'Aarnav\'s Site',
+  title: "Aarnav's Site",
   tagline: 'Too Lazy to write a tagline',
   favicon: 'img/favicon.ico',
 
@@ -22,7 +25,11 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   scripts: [
-    {src: 'https://plausible.viren070.me/js/script.js', defer: true, 'data-domain': 'aarnav.rf.gd'}
+    {
+      src: 'https://plausible.viren070.me/js/script.js',
+      defer: true,
+      'data-domain': 'aarnav.rf.gd',
+    },
   ],
   future: {
     experimental_faster: {
@@ -39,7 +46,7 @@ const config: Config = {
       'classic',
       {
         sitemap: {
-          lastmod: "date",
+          lastmod: 'date',
           changefreq: 'weekly',
           priority: 0.8,
           filename: 'sitemap.xml',
@@ -63,23 +70,23 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Aarnav\'s Site',
+      title: "Aarnav's Site",
       logo: {
         alt: 'Guides Logo',
         src: 'img/logo-light.png',
         srcDark: 'img/logo-dark.png',
       },
       items: [
-        // add widget here as navbar is always loaded regardless of page
+        // Add the custom navbar item
+        // Add other navbar items
         {
           href: 'https://github.com/Aarnav-Tech/',
           position: 'right',
           className: 'header-github-link',
-          'title': 'Visit My GitHub',
+          title: 'Visit My GitHub',
           'aria-label': 'GitHub Account',
         },
-        // Add the custom theme switcher
-      ],
+      ]
     },
     footer: {
       style: 'dark',
@@ -121,7 +128,7 @@ const config: Config = {
       sidebar: {
         autoCollapseCategories: true,
         hideable: true,
-      }
+      },
     },
   } satisfies Preset.ThemeConfig,
   plugins: [
@@ -131,7 +138,7 @@ const config: Config = {
         hashed: true,
         indexDocs: true,
         indexPages: true,
-        language: ["en"],
+        language: ['en'],
       },
     ],
   ],
