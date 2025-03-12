@@ -78,6 +78,11 @@ const config: Config = {
           'title': 'Visit My GitHub',
           'aria-label': 'GitHub Account',
         },
+        // Add the custom theme switcher
+        {
+          type: 'custom-themeSwitcher',
+          position: 'right',
+        },
       ],
     },
     footer: {
@@ -108,7 +113,7 @@ const config: Config = {
       ],
     },
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: 'light',
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
