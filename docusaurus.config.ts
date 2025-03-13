@@ -114,6 +114,7 @@ const config: Config = {
           ],
         },
       ],
+      copyright: `Copyright ©${new Date().getFullYear()} Aarnav Lokesh.`,
     },
     colorMode: {
       defaultMode: 'light',
