@@ -1,9 +1,7 @@
-
+import React from 'react';
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-import { NavbarItem } from '@docusaurus/theme-common';
-
 
 const config: Config = {
   title: "Aarnav's Site",
@@ -77,7 +75,7 @@ const config: Config = {
         srcDark: 'img/logo-dark.png',
       },
       items: [
-        // Add the custom navbar item
+
         // Add other navbar items
         {
           href: 'https://github.com/Aarnav-Tech/',
@@ -86,7 +84,7 @@ const config: Config = {
           title: 'Visit My GitHub',
           'aria-label': 'GitHub Account',
         },
-      ]
+      ],
     },
     footer: {
       style: 'dark',
