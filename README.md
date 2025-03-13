@@ -87,3 +87,5 @@ npm run serve
 
 - Email: [aarnav1lokesh@gmail.com](mailto:aarnav1lokesh@gmail.com)
 - GitHub: [Aarnav-Tech](https://github.com/Aarnav-Tech)
+
+![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
