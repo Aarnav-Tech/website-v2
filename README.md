@@ -1,53 +1,89 @@
-# Guides
+# Aarnav's Website v2
 
-This website contains guides on using various apps that I have found useful and it is built using [Docusaurus](https://docusaurus.io/), a modern static website generator. The search bar is also powered by [DocSearch x Algolia](https://docsearch.algolia.com/)
+## Description
 
-If you want to contribute, see [Contributing](#contributing)
+Welcome to the repository for Aarnav's Website v2! This project is built using **Docusaurus**, a modern static website generator that helps you create beautiful documentation websites. The site is designed to provide users with an engaging and informative experience, showcasing various projects and resources.
 
-## Prerequisites
+## Features
 
-Before you can run or contribute to this project, you need to have Node.js and npm installed on your machine.
+- **Documentation Focused**: Ideal for creating documentation and project showcases.
+- **Responsive Design**: Adapts seamlessly to various screen sizes and devices.
+- **Fast Loading Times**: Optimized for speed to enhance user experience.
+- **SEO Friendly**: Built with best practices to improve search engine visibility.
+- **Versioning**: Supports versioning for documentation, making it easy to manage updates.
 
-### Installing Node.js and npm
+## Live Demo
 
-1. **Download Node.js**: Go to the [official Node.js website](https://nodejs.org/) and download the installer for your operating system. This will also install npm, so you don't need to install it separately.
-2. **Verify Installation**: Open your terminal or command prompt and run the following commands to check that Node.js and npm are installed correctly.
-   ```sh
-   node --version
-   npm --version
-    ```
+You can view the live version of the website at: [Aarnav's Website](https://aarnav.rf.gd)
 
-### Setting up the project 
+## Installation
 
-After installing Node.js and npm, you can set up the project on your local machine. 
+To run this project locally, follow these steps:
 
-1. **Clone the repository:** First, clone the repisitory to your local machine using the following command: 
-    ```
-    git clone https://github.com/Viren070/guides.git 
-    ```
-2. **Navigate to the directory that contains the repository**
-    ```
-    cd guides 
-    ```
-3. **Install dependencies**: Install all the necessary dependencies by running: 
-    ```
-    npm install
-    ```
-## Local development 
+1. **Clone the repository**:
 
-```
-$ npm start
+```bash
+git clone https://github.com/Aarnav-Tech/website-v2.git
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+2. **Navigate To Project's Directory**:
 
-## Build
-
-To generate static content into the `build` directory, which can be served using any static contents hosting service, run:
-```
-$ npm run build
+```bash
+cd website-v2
 ```
 
-## Contributing 
+3. **Install Dependencies**:
 
-If you wish to contribute or make changes to a specific page, fork the repository, locate the page within the `docs` folder, make your changes, and create a pull request.
+```bash
+npm install
+```
+
+4. **Run The Development Server**:
+
+```bash
+npm run start
+```
+
+**or**
+
+```bash
+npm start
+```
+
+5. **Open your browser and go to `http://localhost:3000` to see your site.**
+
+## Building / Publishing
+
+1. **Go to your terminal and execute:**
+
+```bash
+npm run build
+```
+
+2. **All the static files for your website will be generated in the build folder.**
+
+3. **To view your built website**:
+
+```bash
+npm run serve
+```
+
+**Open your browser and go to `http://localhost:3000` to see your site.**
+
+> [!NOTE]  
+> **Or you can use any live server program in the build folder.**
+
+## Contributing
+
+**Contributions are welcome! If you have suggestions for improvements or new features, please fork the repository and submit a pull request.**
+
+## License
+
+**This project is licensed under the MIT License. See the LICENSE file for details.**
+
+## Contact
+
+**For any inquiries or feedback, feel free to reach out:**
+
+- Email: [aarnav1lokesh@gmail.com](mailto:aarnav1lokesh@gmail.com)
+- GitHub: [Aarnav-Tech](https://github.com/Aarnav-Tech)
